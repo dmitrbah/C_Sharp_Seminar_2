@@ -1,11 +1,11 @@
-﻿bool MultipalTwoNumbers(int num)
+﻿bool MultipalTwoNumbers(int num, int num1, int num2)
 {
-bool multipal = (num % 7 == 0) && (num % 23 == 0);
+bool multipal = (num % num1 == 0) && (num % num2 == 0);
 return multipal;
 }
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (MultipalTwoNumbers(number) == true) Console.WriteLine("кратно 7 и 23");
+if (MultipalTwoNumbers(number, 7, 23) == true) Console.WriteLine("кратно 7 и 23");
 else Console.WriteLine("не кратно 7 и 23");
